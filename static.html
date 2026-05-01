@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔒 Scam URL Detector | AI-Powered Phishing Detection</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <span class="logo-icon">🛡️</span>
+                <h1>Scam URL Detector</h1>
+            </div>
+            <p class="tagline">AI-powered phishing detection using Machine Learning</p>
+            <div class="status-badge" id="status-badge">
+                <span class="status-dot"></span>
+                Checking connection...
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Input Section -->
+            <div class="input-section">
+                <div class="input-header">
+                    <label for="url-input">🔗 Enter URLs to analyze:</label>
+                    <div class="button-group">
+                        <button id="example-btn" class="btn-secondary">
+                            📋 Try Examples
+                        </button>
+                        <button id="clear-btn" class="btn-secondary">
+                            🗑️ Clear All
+                        </button>
+                    </div>
+                </div>
+                
+                <textarea 
+                    id="url-input" 
+                    placeholder="Enter one or more URLs (one per line)&#10;&#10;Example:&#10;https://www.google.com&#10;https://github.com&#10;http://paypal.com.login.secure.verify.com"
+                    rows="6"
+                ></textarea>
+                
+                <button id="analyze-btn" class="btn-primary">
+                    🔍 Analyze URL(s)
+                </button>
+                
+                <div class="input-hint">
+                    💡 Tip: Press Ctrl+Enter to analyze
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div id="results-section" class="results-section" style="display: none;">
+                <h2>📊 Analysis Results</h2>
+                <div id="results-container"></div>
+            </div>
+
+            <!-- Loading Spinner -->
+            <div id="loading" class="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Analyzing URLs...</p>
+            </div>
+
+            <!-- Info Section -->
+            <div class="info-section">
+                <h3>How It Works</h3>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-icon">🤖</div>
+                        <h4>Machine Learning</h4>
+                        <p>Logistic Regression model trained on thousands of legitimate and phishing URLs</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📊</div>
+                        <h4>TF-IDF Features</h4>
+                        <p>Extracts meaningful patterns from URL structure, tokens, and n-grams</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">⚡</div>
+                        <h4>Real-time Analysis</h4>
+                        <p>Instant detection with confidence scores and detailed URL statistics</p>
+                    </div>
+                </div>
+                
+                <div class="warning-box">
+                    <strong>⚠️ Disclaimer:</strong> This tool is for educational purposes. Always verify URLs manually and use additional security measures.
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2024 Scam URL Detector | Protecting users from online threats</p>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
